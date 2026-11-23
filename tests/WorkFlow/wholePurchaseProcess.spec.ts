@@ -10,7 +10,7 @@ test.describe('test whole purchase process', () => {
       await expect(userName).toHaveText('John Smith');
     });
 
-    test('Create a product and add it to chart', async ({ loggedInPage: page, newProduct }) => {
+    test('Search one product, add it to cart and finish the billing for the product', async ({ loggedInPage: page, newProduct }) => {
       const billingData ={     
         country: "Australia",
         postal_code: "2000",

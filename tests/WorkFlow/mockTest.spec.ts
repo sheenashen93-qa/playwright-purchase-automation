@@ -22,7 +22,7 @@ test.describe('mock product list API', () => {
         await expect(page.getByTestId('product-name')).toHaveCount(1);
     });
 
-    test('(b) age handles 500 error from product list API', async ({ page }) => {
+    test('(b) page handles 500 error from product list API', async ({ page }) => {
         await page.route('https://api.practicesoftwaretesting.com/products*', async route => {
             const request = route.request();
             // 只处理首页加载商品列表的请求，其他请求放行
